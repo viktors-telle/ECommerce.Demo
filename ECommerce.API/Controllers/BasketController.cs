@@ -20,7 +20,7 @@ namespace ECommerce.API.Controllers
         {
             var actor = GetActor(userId);
 
-            var products = await actor.GetBasket();
+            var products = await actor.GetBasket();           
 
             return new ApiBasket
             {

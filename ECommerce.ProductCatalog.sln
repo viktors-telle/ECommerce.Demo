@@ -9,7 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.ProductCatalog", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.ProductCatalog.Model", "ECommerce.ProductCatalog.Model\ECommerce.ProductCatalog.Model.csproj", "{771B983B-696D-4419-ADB0-C9359B7F74E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.API", "ECommerce.API\ECommerce.API.csproj", "{AED55B4D-B8CF-48B8-8184-BDA8F698666F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.API", "ECommerce.API\ECommerce.API.csproj", "{AED55B4D-B8CF-48B8-8184-BDA8F698666F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserActor", "UserActor\UserActor.csproj", "{76DC91E2-7F58-4D5A-98CF-3AA39534E40A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserActor.Interfaces", "UserActor.Interfaces\UserActor.Interfaces.csproj", "{93D52BD1-8A6F-4695-89D0-815A80579D43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +53,18 @@ Global
 		{AED55B4D-B8CF-48B8-8184-BDA8F698666F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AED55B4D-B8CF-48B8-8184-BDA8F698666F}.Release|x64.ActiveCfg = Release|Any CPU
 		{AED55B4D-B8CF-48B8-8184-BDA8F698666F}.Release|x64.Build.0 = Release|Any CPU
+		{76DC91E2-7F58-4D5A-98CF-3AA39534E40A}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{76DC91E2-7F58-4D5A-98CF-3AA39534E40A}.Debug|x64.ActiveCfg = Debug|x64
+		{76DC91E2-7F58-4D5A-98CF-3AA39534E40A}.Debug|x64.Build.0 = Debug|x64
+		{76DC91E2-7F58-4D5A-98CF-3AA39534E40A}.Release|Any CPU.ActiveCfg = Release|x64
+		{76DC91E2-7F58-4D5A-98CF-3AA39534E40A}.Release|x64.ActiveCfg = Release|x64
+		{76DC91E2-7F58-4D5A-98CF-3AA39534E40A}.Release|x64.Build.0 = Release|x64
+		{93D52BD1-8A6F-4695-89D0-815A80579D43}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{93D52BD1-8A6F-4695-89D0-815A80579D43}.Debug|x64.ActiveCfg = Debug|x64
+		{93D52BD1-8A6F-4695-89D0-815A80579D43}.Debug|x64.Build.0 = Debug|x64
+		{93D52BD1-8A6F-4695-89D0-815A80579D43}.Release|Any CPU.ActiveCfg = Release|x64
+		{93D52BD1-8A6F-4695-89D0-815A80579D43}.Release|x64.ActiveCfg = Release|x64
+		{93D52BD1-8A6F-4695-89D0-815A80579D43}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

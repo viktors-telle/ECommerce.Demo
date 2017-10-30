@@ -33,6 +33,11 @@ namespace ECommerce.ProductCatalog
             return await _productRepository.GetAllProducts();
         }
 
+        public async Task<Product> GetProduct(Guid key)
+        {
+            return await _productRepository.GetProduct(key);
+        }
+
         /// <summary>
         /// Optional override to create listeners (e.g., HTTP, Service Remoting, WCF, etc.) for this service replica to handle client or user requests.
         /// </summary>
@@ -56,16 +61,39 @@ namespace ECommerce.ProductCatalog
         protected override async Task RunAsync(CancellationToken cancellationToken)
         {
             _productRepository = new ServiceFabricProductRepository(StateManager);
-            await _productRepository.AddProduct(new Model.Product
+
+            var product1 = new Product
             {
                 Id = Guid.NewGuid(),
-                Name = "Phone",
-                Description = "Mobile phone",
-                Availability = 10,
-                Price = 200
-            });
+                Name = "Dell Monitor",
+                Description = "Computer Monitor",
+                Price = 500,
+                Availability = 100
+            };
 
-            var allProducts = await _productRepository.GetAllProducts();
+            var product2 = new Product
+            {
+                Id = Guid.NewGuid(),
+                Name = "Surface Book",
+                Description = "Microsoft's Latest Laptop, i7 CPU, 1Tb SSD",
+                Price = 2200,
+                Availability = 15
+            };
+
+            var product3 = new Product
+            {
+                Id = Guid.NewGuid(),
+                Name = "Arc Touch Mouse",
+                Description = "Computer Mouse, bluetooth, requires 2 AAA batteries",
+                Price = 60,
+                Availability = 30
+            };
+
+            await _productRepository.AddProduct(product1);
+            await _productRepository.AddProduct(product2);
+            await _productRepository.AddProduct(product3);
+
+            IEnumerable<Product> all = await _productRepository.GetAllProducts();
         }
     }
 }
